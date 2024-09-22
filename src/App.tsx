@@ -1,15 +1,21 @@
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/navbar/Navbar';
 import { ContextProvider } from './contexts/Contexts';
+import Home from './pages/home/home';
 
 function App() {
   return (
     <ContextProvider>
-       <BrowserRouter>
-      <Navbar />
-      </BrowserRouter>
-    </ContextProvider>
+    <BrowserRouter>
+   <Navbar />
+     {/* Uso de Routes e Route no lugar de Router */}
+     <Routes>
+       {/* Defina a rota para a página Home */}
+       <Route path="/" element={<Home />} />
+     </Routes>
+   </BrowserRouter>
+ </ContextProvider>
   );
 }
 

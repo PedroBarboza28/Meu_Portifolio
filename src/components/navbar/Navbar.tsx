@@ -35,24 +35,25 @@ const Navbar = () => {
         </button>
 
         {/* Menu Desktop */}
-        <nav className="hidden md:flex flex-grow justify-center space-x-6">
-          <Link to="/" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Home</Link>
-          <Link to="/cursos" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Cursos</Link>
-          <Link to="/sobre" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Quem Faz</Link>
-          <Link to="/contato" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Contato</Link>
+        <nav className="hidden md:flex flex-grow items-center justify-center space-x-6">
+          <div className="flex-grow flex justify-center space-x-6">
+            <Link to="/" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Home</Link>
+            <Link to="/cursos" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Cursos</Link>
+            <Link to="/sobre" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Quem Faz</Link>
+            <Link to="/contato" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Contato</Link>
+          </div>
+          {/* Botão para alternar entre claro e escuro com ícones no menu desktop */}
+          <button
+            onClick={toggleTheme}
+            className="p-2 border rounded text-gray-800 dark:text-white dark:bg-gray-800 focus:outline-none"
+          >
+            {darkMode ? (
+              <SunIcon className="h-6 w-6 text-yellow-500" />
+            ) : (
+              <MoonIcon className="h-6 w-6 text-white" />
+            )}
+          </button>
         </nav>
-
-        {/* Botão para alternar entre claro e escuro com ícones */}
-        <button
-          onClick={toggleTheme}
-          className="ml-4 p-2 border rounded text-gray-800 dark:text-white dark:bg-gray-800 focus:outline-none"
-        >
-          {darkMode ? (
-            <SunIcon className="h-6 w-6 text-yellow-500" />
-          ) : (
-            <MoonIcon className="h-6 w-6 text-white" />
-          )}
-        </button>
 
         {/* Menu Mobile */}
         <div className={`fixed top-0 right-0 h-full w-64 ${darkMode ? 'bg-gray-900' : 'bg-white'} shadow-lg transform transition-transform duration-300 ease-in-out md:hidden ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}>
@@ -67,6 +68,19 @@ const Navbar = () => {
             <li><Link to="/cursos" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Cursos</Link></li>
             <li><Link to="/sobre" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Quem Faz</Link></li>
             <li><Link to="/contato" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Contato</Link></li>
+            {/* Botão para alternar entre claro e escuro no modo mobile */}
+            <li>
+              <button
+                onClick={toggleTheme}
+                className="flex items-center justify-center p-2 border rounded text-gray-800 dark:text-white dark:bg-gray-800 focus:outline-none w-full"
+              >
+                {darkMode ? (
+                  <SunIcon className="h-6 w-6 text-yellow-500" />
+                ) : (
+                  <MoonIcon className="h-6 w-6 text-white" />
+                )}
+              </button>
+            </li>
           </ul>
         </div>
       </div>

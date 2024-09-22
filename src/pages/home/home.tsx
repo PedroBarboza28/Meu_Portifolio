@@ -6,7 +6,7 @@ const Home = () => {
   return (
     // Adicionando padding-top para evitar que a navbar esconda o conteúdo
     <div
-      className={`flex flex-col items-center justify-center min-h-screen pt-16 ${
+      className={`flex flex-col py-4 items-center justify-center min-h-screen pt-16 ${
         darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"
       }`}
     >
@@ -24,7 +24,7 @@ const Home = () => {
         {/* Coluna Direita - Imagem */}
         <div className="w-full md:w-1/2 p-4 flex justify-center">
           <img
-            src="./src/assets/foto_linkedin2.jpg"
+            src="./src/assets/fotolinkedin2.jpg"
             alt="Foto de perfil"
             className="rounded-lg"
             style={{ width: "70%", height: "auto", aspectRatio: "967/1450" }} // Reduzindo para 70%

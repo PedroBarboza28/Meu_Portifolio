@@ -24,7 +24,7 @@ const Home = () => {
         {/* Coluna Direita - Imagem */}
         <div className="w-full md:w-1/2 p-4 flex justify-center">
           <img
-            src="./src/assets/fotolinkedin2.jpg"
+            src="https://ik.imagekit.io/netdmdufko/fotolinkedin2.jpg?updatedAt=1727049254867"
             alt="Foto de perfil"
             className="rounded-lg"
             style={{ width: "70%", height: "auto", aspectRatio: "967/1450" }} // Reduzindo para 70%

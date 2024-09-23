@@ -20,6 +20,7 @@ interface ContextProviderProps {
 export const ContextProvider = ({ children }: ContextProviderProps) => {
     const [isMenuOpen, setMenuOpen] = useState(false); // Estado para controlar o menu
     const [darkMode, setDarkMode] = useState(false); // Estado para controlar o tema (claro/escuro)
+    
 
     // Função para alternar o tema
     const toggleTheme = () => {
@@ -45,6 +46,7 @@ export const ContextProvider = ({ children }: ContextProviderProps) => {
 };
 
 // Hook personalizado para usar o contexto de menu e tema
+// eslint-disable-next-line react-refresh/only-export-components
 export const useMenu = () => {
     const context = useContext(MenuContext);
     if (!context) {

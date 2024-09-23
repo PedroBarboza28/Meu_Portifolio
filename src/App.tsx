@@ -19,7 +19,6 @@ function App() {
        <Route path="/projects" element={<Projects />} /> {/* Rota para Projects */}
        <Route path="/whoami" element={<WhoAmI />} /> {/* Rota para Projects */}
        <Route path="/skills" element={<Skills />} /> {/* Rota para Projects */}
-
      </Routes>
    </BrowserRouter>
  </ContextProvider>

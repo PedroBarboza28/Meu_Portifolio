@@ -65,7 +65,7 @@ const Navbar = () => {
           </div>
           <ul className="flex flex-col p-6 space-y-4">
             <li><Link to="/" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Página Inicial</Link></li>
-            <li><Link to="/cursos" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Sobre mim</Link></li>
+            <li><Link to="/whoami" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Sobre mim</Link></li>
             <Link to="/projects" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Projects</Link> {/* Adicionando Link para Projects */}
             <li><Link to="/skills" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Habilidades</Link></li>
             {/* Botão para alternar entre claro e escuro no modo mobile */}

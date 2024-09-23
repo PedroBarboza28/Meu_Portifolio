@@ -36,7 +36,6 @@ const SobreMim = () => {
       data: "2020",
       descricao: "Descrição do curso 4",
     },
-    // Adicione mais certificados aqui se necessário
   ];
 
   // Função para rolar os cards de certificados
@@ -57,6 +56,42 @@ const SobreMim = () => {
         darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"
       }`}
     >
+      {/* Seção de Experiência */}
+      <div className="w-full max-w-4xl p-6">
+        <h2 className="text-3xl font-bold mb-8">Experiência</h2>
+
+        {/* Cards de Experiência */}
+        <div className="space-y-12">
+          {[
+            { empresa: "Empresa 1", logo: "logo1.png", descricao: "Descrição da experiência 1" },
+            { empresa: "Empresa 2", logo: "logo2.png", descricao: "Descrição da experiência 2" },
+            { empresa: "Empresa 3", logo: "logo3.png", descricao: "Descrição da experiência 3" },
+            { empresa: "Empresa 4", logo: "logo4.png", descricao: "Descrição da experiência 4" },
+          ].map((exp, index) => (
+            <div key={index} className={`flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}>
+              {/* Card de Experiência */}
+              <div className={`w-1/2 ${darkMode ? "bg-gray-800" : "bg-white"} p-6 rounded-lg shadow-lg`}>
+                <h4 className="text-xl font-bold mb-2">{exp.empresa}</h4>
+                <p>{exp.descricao}</p>
+              </div>
+
+              {/* Linha vertical com círculo */}
+              <div className="w-1/2 flex justify-center items-center">
+                <div className="relative">
+                  {/* Linha Vertical */}
+                  <div className="h-32 w-1 bg-gray-300 dark:bg-gray-600"></div>
+
+                  {/* Círculo com Logo */}
+                  <div className={`absolute -top-4 left-1/2 transform -translate-x-1/2 w-12 h-12 ${darkMode ? "bg-gray-700" : "bg-white"} rounded-full flex items-center justify-center shadow-lg`}>
+                    <img src={exp.logo} alt={exp.empresa} className="w-8 h-8" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* Seção de Certificados */}
       <div className="w-full max-w-4xl p-6 mt-12">
         <div className="flex items-center justify-between mb-4">
@@ -87,7 +122,7 @@ const SobreMim = () => {
           {certificados.slice(currentIndex, currentIndex + (window.innerWidth < 768 ? 1 : 3)).map((certificado, index) => (
             <div
               key={index}
-              className="flex-shrink-0 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg w-full"
+              className={`flex-shrink-0 p-6 rounded-lg shadow-lg w-full ${darkMode ? "bg-gray-800" : "bg-white"}`}
               style={{ maxWidth: "300px" }} // Ajuste o tamanho conforme necessário
             >
               <div className="flex flex-col items-center">
@@ -95,7 +130,7 @@ const SobreMim = () => {
                 <img src={certificado.logo} alt={certificado.titulo} className="w-16 h-16 mb-4" />
 
                 {/* Título e Detalhes */}
-                <h4 className="text-lg font-bold">{certificado.titulo}</h4>
+                <h4 className={`text-lg font-bold ${darkMode ? "text-white" : "text-black"}`}>{certificado.titulo}</h4>
                 <div className="flex justify-between w-full mt-2 text-sm text-gray-500">
                   <span>{certificado.empresa}</span>
                   <span>{certificado.data}</span>

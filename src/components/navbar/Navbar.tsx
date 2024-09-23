@@ -36,10 +36,10 @@ const Navbar = () => {
 
         {/* Menu Desktop */}
         <nav className="hidden md:flex flex-grow justify-center space-x-6">
-          <Link to="/" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Home</Link>
-          <Link to="/cursos" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Cursos</Link>
-          <Link to="/sobre" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Quem Faz</Link>
-          <Link to="/contato" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Contato</Link>
+          <Link to="/" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Página Inicial</Link>
+          <Link to="/whoami" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Sobre mim</Link>
+          <Link to="/projects" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Projetos</Link>
+          <Link to="/skills" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Habilidades</Link>
         </nav>
 
         {/* Botão para alternar entre claro e escuro com ícones */}
@@ -64,10 +64,10 @@ const Navbar = () => {
             </button>
           </div>
           <ul className="flex flex-col p-6 space-y-4">
-            <li><Link to="/" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Home</Link></li>
-            <li><Link to="/cursos" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Cursos</Link></li>
-            <li><Link to="/sobre" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Quem Faz</Link></li>
-            <li><Link to="/contato" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Contato</Link></li>
+            <li><Link to="/" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Página Inicial</Link></li>
+            <li><Link to="/cursos" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Sobre mim</Link></li>
+            <Link to="/projects" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Projects</Link> {/* Adicionando Link para Projects */}
+            <li><Link to="/skills" className={`hover:text-blue-500 ${darkMode ? 'text-white' : 'text-black'}`}>Habilidades</Link></li>
             {/* Botão para alternar entre claro e escuro no modo mobile */}
             <li>
               <button

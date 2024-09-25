@@ -1,5 +1,5 @@
 import { useMenu } from "../../contexts/Contexts";
-import { FaExternalLinkAlt, FaUser } from 'react-icons/fa'; // Importando ícones
+import { FaExternalLinkAlt, FaUser } from "react-icons/fa"; // Importando ícones
 
 const Home = () => {
   const { darkMode } = useMenu(); // Para pegar o estado do Dark Mode
@@ -12,17 +12,24 @@ const Home = () => {
       }`}
     >
       {/* Seção das duas colunas */}
-      <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-4xl p-6">
+      <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-5xl p-6">
         {/* Coluna Esquerda */}
-        <div className="w-full md:w-1/2 p-4">
-          <h1 className="text-3xl font-bold">Olá, sou Desenvolvedor</h1>
-          <p className="mt-4">
-            Aqui vou colocar uma breve introdução sobre mim. Sou um
-            desenvolvedor apaixonado por tecnologia!
+        <div className="w-full md:w-5/6 p-4 text-left mb-8 mx-10 ml-0">
+          <p className="text-xl">Olá, Sou Pedro Barboza</p>
+          <h1 className="text-3xl font-bold mt-4">
+            Transformo <span className="text-blue-600">desafios</span> em
+            oportunidades lucrativas por meio de{" "}
+            <span className="text-blue-600">código</span> e
+            <span className="text-blue-600"> criatividade</span>.
+          </h1>
+          <p className="text-lg ">
+            Como desenvolvedor Fullstack, posso atuar em todas as etapas do
+            desenvolvimento, desde a modelagem de dados até a implementação
+            completa de back-end e front-end, sempre com foco em proporcionar a
+            melhor experiência ao usuário.
           </p>
-
           {/* Botões abaixo da primeira coluna */}
-          <div className="flex justify-center mt-4 space-x-4">
+          <div className="flex justify-start mt-4 space-x-4"> {/* Alinhando botões à esquerda */}
             <button className="flex items-center px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
               <FaExternalLinkAlt className="mr-2" /> Currículo
             </button>
@@ -31,14 +38,13 @@ const Home = () => {
             </button>
           </div>
         </div>
-
         {/* Coluna Direita - Imagem */}
         <div className="w-full md:w-1/2 p-4 flex justify-center">
           <img
             src="https://ik.imagekit.io/netdmdufko/fotolinkedin2.jpg?updatedAt=1727049254867"
             alt="Foto de perfil"
             className="rounded-lg"
-            style={{ width: "70%", height: "auto", aspectRatio: "967/1450" }} // Reduzindo para 70%
+            style={{ width: "80%", height: "auto", aspectRatio: "967/1450" }} // Aumentando a largura para 100%
           />
         </div>
       </div>

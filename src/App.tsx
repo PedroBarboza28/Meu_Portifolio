@@ -6,6 +6,7 @@ import Home from './pages/home/home';
 import Projects from './pages/projects/Projects';
 import WhoAmI from './pages/whoami/WhoAmI';
 import Skills from './pages/skills/Skills';
+import SeeProjects from './pages/seeprojects/SeeProjects';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
        <Route path="/projects" element={<Projects />} /> {/* Rota para Projects */}
        <Route path="/whoami" element={<WhoAmI />} /> {/* Rota para Projects */}
        <Route path="/skills" element={<Skills />} /> {/* Rota para Projects */}
+       <Route path="/seeprojects/:nomeProjeto" element={<SeeProjects />} /> {/* Adicionando parâmetro na rota */}
+
      </Routes>
    </BrowserRouter>
  </ContextProvider>

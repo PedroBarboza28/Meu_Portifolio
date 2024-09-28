@@ -17,7 +17,7 @@ const Navbar = () => {
   }, [darkMode]);
 
   return (
-    <header className={`shadow-md fixed w-full top-0 left-0 z-50 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
+    <header className={`shadow-md fixed w-full h-15 top-0 left-0 z-50 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         {/* Logo */}
         <div className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-black'}`}>

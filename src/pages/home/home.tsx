@@ -1,6 +1,6 @@
 import { useMenu } from "../../contexts/Contexts";
 import { FaExternalLinkAlt } from "react-icons/fa"; // Importando ícones
-import './Home.css'; // Importando o arquivo CSS
+import './home.css'; // Importando o arquivo CSS
 import { Link } from "react-router-dom";
 
 const Home = () => {

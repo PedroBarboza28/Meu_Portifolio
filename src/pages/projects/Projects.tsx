@@ -136,7 +136,7 @@ const Projects = () => {
                   to={`/seeprojects/${projeto.nome}`} // Passando o nome do projeto na URL
                   className="flex items-center space-x-2 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors duration-300"
                 >
-                  <span>Ver Projeto</span>
+                  <span>Saiba Mais</span>
                   <i className="fas fa-arrow-right"></i>
                 </Link>
                 <a
@@ -145,7 +145,7 @@ const Projects = () => {
                   rel="noopener noreferrer" // Segurança ao abrir nova aba
                   className="flex items-center space-x-2 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors duration-300"
                 >
-                  <span>Saiba Mais</span>
+                  <span>Ver Projeto</span>
                   <i className="fab fa-behance"></i>
                 </a>
               </div>

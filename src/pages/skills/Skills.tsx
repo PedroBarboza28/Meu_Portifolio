@@ -1,8 +1,77 @@
 import { useMenu } from "../../contexts/Contexts"; // Importar o contexto
-import { FaReact, FaNodeJs, FaDatabase, FaHtml5, FaCss3Alt, FaJsSquare, FaPython } from "react-icons/fa"; // Importar ícones
 
 const Habilidades = () => {
   const { darkMode } = useMenu(); // Usar o modo escuro/claro
+
+  // Lista de habilidades
+  const habilidades = {
+    Frontend: [
+      {
+        name: "JavaScript",
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+      },
+      {
+        name: "ReactJS",
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
+      },
+      {
+        name: "HTML",
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
+      },
+      {
+        name: "CSS",
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
+      },
+      
+    ],
+    Backend: [
+      {
+        name: "Node.js",
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg",
+      },
+      {
+        name: "TypeScript",
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+      },
+      {
+        name: "Python",
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+      },
+      {
+        name: "Git",
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg",
+      },
+     
+    ],
+    BancoDeDados: [
+      {
+        name: "MySQL",
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg",
+      },
+      {
+        name: "PostgreSQL",
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg",
+      },
+    ],
+    Outros: [
+      {
+        name: "Jest",
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/jest/jest-plain.svg",
+      },
+      {
+        name: "Swagger",
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/swagger/swagger-original.svg",
+      },
+      {
+        name: "Vercel",
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vercel/vercel-original.svg",
+      },
+      {
+        name: "GitHub",
+        logo: "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg",
+      },
+    ],
+  };
 
   return (
     <div
@@ -11,66 +80,38 @@ const Habilidades = () => {
       }`}
     >
       {/* Título */}
-      <h2 className="text-4xl font-bold mb-8">Minhas Habilidades</h2>
+      <h2 className="text-4xl font-bold mb-8 mt-20">Minhas Habilidades</h2> {/* Aumentar a margem superior aqui */}
 
-      {/* Linha com 4 colunas */}
-      <div className="flex flex-wrap justify-around w-full max-w-4xl mb-12">
-        <div className="flex flex-col items-center text-center mb-4">
-          <h3 className="text-xl font-semibold">Frontend</h3>
-          <FaReact className="text-4xl mt-2" />
-        </div>
-        <div className="flex flex-col items-center text-center mb-4">
-          <h3 className="text-xl font-semibold">Backend</h3>
-          <FaNodeJs className="text-4xl mt-2" />
-        </div>
-        <div className="flex flex-col items-center text-center mb-4">
-          <h3 className="text-xl font-semibold">Banco de Dados</h3>
-          <FaDatabase className="text-4xl mt-2" />
-        </div>
-        <div className="flex flex-col items-center text-center mb-4">
-          <h3 className="text-xl font-semibold">Estilização</h3>
-          <div className="flex space-x-2 mt-2">
-            <FaHtml5 className="text-4xl" />
-            <FaCss3Alt className="text-4xl" />
+      {/* Seção de Habilidades */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl w-full mb-8">
+        {Object.entries(habilidades).map(([section, skills]) => (
+          <div
+            key={section}
+            className={`bg-${darkMode ? "gray-800" : "white"} p-6 rounded-lg shadow-lg`}
+          >
+            <h3
+              className={`text-2xl font-bold mb-4 ${darkMode ? "text-white" : "text-black"}`}
+            >
+              {section}
+            </h3>
+            <div className="grid grid-cols-2 gap-4">
+              {skills.map((habilidade, index) => (
+                <div key={index} className="flex flex-col items-center mb-4">
+                  <img
+                    src={habilidade.logo}
+                    alt={`${habilidade.name} Logo`}
+                    className="w-16 h-16 mb-2"
+                  />
+                  <h4
+                    className={`text-xl font-semibold ${darkMode ? "text-white" : "text-black"}`}
+                  >
+                    {habilidade.name}
+                  </h4>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </div>
-
-      {/* Cards de Habilidades */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl w-full">
-        {/* Card 1 */}
-        <div className={`bg-${darkMode ? "gray-800" : "white"} p-6 rounded-lg shadow-lg`}>
-          <h4 className={`text-xl font-semibold mb-2 ${darkMode ? "text-white" : "text-black"}`}>React</h4>
-          <div className="flex space-x-2">
-            <FaReact className={`text-3xl ${darkMode ? "text-white" : "text-black"}`} />
-            <FaJsSquare className={`text-3xl ${darkMode ? "text-white" : "text-black"}`} />
-          </div>
-        </div>
-
-        {/* Card 2 */}
-        <div className={`bg-${darkMode ? "gray-800" : "white"} p-6 rounded-lg shadow-lg`}>
-          <h4 className={`text-xl font-semibold mb-2 ${darkMode ? "text-white" : "text-black"}`}>Node.js</h4>
-          <div className="flex space-x-2">
-            <FaNodeJs className={`text-3xl ${darkMode ? "text-white" : "text-black"}`} />
-            <FaJsSquare className={`text-3xl ${darkMode ? "text-white" : "text-black"}`} />
-          </div>
-        </div>
-
-        {/* Card 3 */}
-        <div className={`bg-${darkMode ? "gray-800" : "white"} p-6 rounded-lg shadow-lg`}>
-          <h4 className={`text-xl font-semibold mb-2 ${darkMode ? "text-white" : "text-black"}`}>Python</h4>
-          <div className="flex space-x-2">
-            <FaPython className={`text-3xl ${darkMode ? "text-white" : "text-black"}`} />
-          </div>
-        </div>
-
-        {/* Card 4 */}
-        <div className={`bg-${darkMode ? "gray-800" : "white"} p-6 rounded-lg shadow-lg`}>
-          <h4 className={`text-xl font-semibold mb-2 ${darkMode ? "text-white" : "text-black"}`}>Banco de Dados</h4>
-          <div className="flex space-x-2">
-            <FaDatabase className={`text-3xl ${darkMode ? "text-white" : "text-black"}`} />
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

@@ -77,7 +77,7 @@ const Habilidades = () => {
     <div
       className={`flex flex-col items-center justify-center min-h-screen p-6 ${
         darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"
-      }`}
+      } bg-transparent`}
     >
       {/* Título */}
       <h2 className="text-4xl font-bold mb-8 mt-20">Minhas Habilidades</h2> {/* Aumentar a margem superior aqui */}

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useMenu } from "../../contexts/Contexts";
 import { SetStateAction, useState } from "react"; // Para o filtro
 
+
 const Projects = () => {
   const { darkMode } = useMenu(); // Para pegar o estado do Dark Mode
   const [filtro, setFiltro] = useState("Todos"); // Gerenciamento do filtro, inicia com "Todos"
@@ -39,7 +40,7 @@ const Projects = () => {
     <div
       className={`flex flex-col items-center justify-center min-h-screen pt-16 ${
         darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"
-      }`}
+      } bg-transparent `}
     >
       {/* Linha com duas colunas, ajustando gap entre elas */}
       <div className="flex flex-col md:flex-row items-start justify-between w-full max-w-4xl p-6 gap-x-12">

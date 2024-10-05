@@ -19,6 +19,8 @@ const Home = () => {
     { name: "Jest", src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/jest/jest-plain.svg" },
     { name: "Swagger", src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/swagger/swagger-original.svg" },
     { name: "Vercel", src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vercel/vercel-original.svg" },
+    { name: "Next.js", src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg" },
+
   ];
 
   const fullTechnologies = [...technologies, ...technologies]; // Duplicando ícones para continuidade
@@ -49,7 +51,7 @@ const Home = () => {
           </p>
           <div className="flex justify-start mt-4 space-x-4">
             <a
-              href="https://drive.google.com/file/d/13fOYGj0xhCNVMY4zSLJBQ-fOseh6HjUj/view?usp=sharing"
+              href="https://drive.google.com/file/d/1jVjc4QKzrtxvFPr96lidfs9iOTioJGQ0/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 bg-blue-500 text-lg text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors duration-300"

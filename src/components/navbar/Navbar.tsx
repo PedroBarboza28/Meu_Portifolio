@@ -4,6 +4,9 @@ import { Link } from "react-router-dom"; // Importa Link para navegação
 import { useEffect, useState } from "react"; // Importa hooks do React
 import SunIcon from "@heroicons/react/24/solid/SunIcon"; // Importa ícone de sol
 import MoonIcon from "@heroicons/react/24/solid/MoonIcon"; // Importa ícone de lua
+import Logo from "../logo/Logo";
+import LinkedInIcon from "../svg/Linkedin";
+import GitHubIcon from "../svg/Github";
 
 const Navbar = () => {
   const { isMenuOpen, toggleMenu, darkMode, toggleTheme } = useMenu(); // Desestrutura variáveis do contexto
@@ -52,9 +55,9 @@ const Navbar = () => {
             darkMode ? "text-white" : "text-black"
           }`}
         >
-          <Link to="/">
-            <img src="/logo.png" alt="Logo" className="h-10" />{" "}
-            {/* Logo do site */}
+          <Link to="/" className="flex items-center">
+            <h1 className="font-bold text-3xl mt-4 leading-8">Pedro</h1>
+            <Logo /> {/* Logo do site */}
           </Link>
         </div>
 
@@ -93,6 +96,16 @@ const Navbar = () => {
             </Link>
           ))}
         </nav>
+
+        <a href="https://github.com/PedroBarboza28" target="blank">
+          <GitHubIcon />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/pedro-barboza-1958722b6/"
+          target="blank"
+        >
+          <LinkedInIcon />
+        </a>
 
         <button
           onClick={toggleTheme}
@@ -165,6 +178,17 @@ const Navbar = () => {
                   <SunIcon className="h-6 w-6 text-yellow-500" />
                 )}
               </button>
+            </li>
+            <li className="flex justify-center space-x-4">
+              <a href="https://github.com/PedroBarboza28" target="blank">
+                <GitHubIcon />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/pedro-barboza-1958722b6/"
+                target="blank"
+              >
+                <LinkedInIcon />
+              </a>
             </li>
           </ul>
         </div>

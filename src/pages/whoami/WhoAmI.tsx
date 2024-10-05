@@ -33,6 +33,15 @@ const SobreMim = () => {
       descricao:
         "Este curso de Gestão de Projetos visa capacitar os alunos a dominar técnicas essenciais, aumentando suas oportunidades e valor no mercado. Os participantes aprenderão a planejar e gerenciar projetos com metodologias ágeis, desenvolvendo habilidades de liderança, comunicação e produtividade, destacando-se em suas áreas de atuação.",
     },
+    {
+      logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM96gfcyA3LyhNvRQwSJLwM6LIgaPSiQ9O4g&s",
+      titulo: "Product Designer",
+      empresa: "Cubos Academy",
+      data: "2024",
+      descricao:
+        "Neste curso, você aprenderá sobre design de interfaces e experiência do usuário (UX). Vamos explorar metodologias como Desk Research, definição de personas e aspectos visuais, como cores e tipografia. Venha dominar as tecnologias essenciais para criar produtos eficazes e impactantes!",
+    },
+
   ];
 
   // Função para rolar os cards de certificados
@@ -72,7 +81,7 @@ const SobreMim = () => {
     >
       {/* Seção de Experiência */}
       <div className="w-full max-w-4xl p-6">
-        <h2 className="text-3xl font-bold mb-8">Experiência</h2>
+        <h2 className="text-3xl font-bold mt-10 mb-20 ">Experiência</h2>
 
         {/* Cards de Experiência */}
         <div className="space-y-12">
@@ -113,7 +122,7 @@ const SobreMim = () => {
                     } p-6 rounded-lg shadow-lg`}
                   >
                     <h4 className="text-xl font-bold mb-2">{exp.empresa}</h4>
-                    <p>{exp.descricao}</p>
+                    <p className="text-left text-lg">{exp.descricao}</p>
                   </div>
                   {/* Linha vertical com círculo e data */}
                   <div className="w-1/2 flex justify-center items-center">
@@ -240,7 +249,7 @@ const SobreMim = () => {
                   </div>
 
                   {/* Descrição com barra de rolagem */}
-                  <p className="mt-4 text-left text-sm max-h-44 overflow-y-auto">
+                  <p className="mt-4 text-left text-lg max-h-44 font-normal overflow-y-auto">
                     {certificado.descricao}
                   </p>
                 </div>

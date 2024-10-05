@@ -97,12 +97,12 @@ const Navbar = () => {
           ))}
         </nav>
 
-        <a href="https://github.com/PedroBarboza28" target="blank">
+        <a href="https://github.com/PedroBarboza28" target="blank" className="hidden md:block" >
           <GitHubIcon />
         </a>
         <a
           href="https://www.linkedin.com/in/pedro-barboza-1958722b6/"
-          target="blank"
+          target="blank" className="hidden md:block"
         >
           <LinkedInIcon />
         </a>

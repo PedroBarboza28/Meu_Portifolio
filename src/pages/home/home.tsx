@@ -42,9 +42,9 @@ const Home = () => {
           <p className="text-xl font-normal leading-9">Olá, Sou Pedro Barboza</p>
           <h1 className="font-bold text-3xl mt-4 leading-8">
             Transformo{" "}
-            <span className="text-blue-500 font-black">desafios</span> em oportunidades lucrativas por meio de{" "}
-            <span className="text-blue-500 font-black">código</span> e
-            <span className="text-blue-500 font-black"> criatividade</span>.
+            <span className="text-blue-600 font-black">desafios</span> em oportunidades lucrativas por meio de{" "}
+            <span className="text-blue-600 font-black">código</span> e
+            <span className="text-blue-600 font-black"> criatividade</span>.
           </h1>
           <p className="text-lg font-normal mt-5 leading-7">
             Como desenvolvedor Fullstack, posso atuar em todas as etapas do desenvolvimento, desde a modelagem de dados até a implementação completa de back-end e front-end, sempre com foco em proporcionar a melhor experiência ao usuário.

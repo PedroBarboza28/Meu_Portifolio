@@ -8,7 +8,7 @@
 
 .animate-marquee {
     display: flex;
-    animation: marquee 10s linear infinite; /* Mantém a animação contínua */
+    animation: marquee 20s linear infinite; /* Mantém a animação contínua */
 }
 
 @keyframes marquee {
@@ -29,4 +29,24 @@ img {
     display: block;
     width: 64px; /* Tamanho fixo dos ícones */
     height: 64px;
+}
+
+@media (max-width: 640px) { /* 'sm' em Tailwind CSS */
+
+
+    .animate-marquee {
+        display: flex;
+        animation: marquee 25s linear infinite; /* Mantém a animação contínua */
+    }
+    
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-250%); /* Move o conteúdo para a esquerda */
+    }
+}
+
+
 }

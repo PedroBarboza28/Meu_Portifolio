@@ -180,7 +180,7 @@ const SobreMim = () => {
                     </div>
                     <span className="text-lg">{exp.data}</span>
                   </div>
-                  <p>{exp.descricao}</p>
+                  <p className="text-left text-lg max-h-30 font-normal">{exp.descricao}</p>
                 </div>
               )}
             </div>
